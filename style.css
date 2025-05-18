@@ -1,0 +1,210 @@
+:root {
+    /* Colors */
+    --grey-900: 0, 0%, 8%;
+    --grey-800: 0, 0%, 12%;
+    --grey-700: 0, 0%, 20%;
+    --green: 75, 94%, 57%;
+    --white: 0, 0%, 100%;
+
+    /* Typography */
+    --text-preset-1-font-size: 1.5rem; /* 24px */
+    --text-preset-1-line-height: 1.5; /* 150% */
+    --text-preset-1-letter-spacing: 0rem;
+
+
+    --text-preset-2-font-size: 0.875rem; /* 14px */
+    --text-preset-2-line-height: 1.5; /* 150% */
+    --text-preset-2-letter-spacing: 0rem;
+
+
+    /* Spacing */
+    --spacing-500: 2.5rem; /* 40px */
+    --spacing-300: 1.5rem; /* 24px */
+    --spacing-200: 1rem; /* 16px */
+    --spacing-150: 0.75rem; /* 12px */
+    --spacing-100: 0.5rem; /* 8px */
+    --spacing-50: 0.25rem; /* 4px */
+
+    /* Radius */
+    --radius-150: 0.75rem; /* 12px */
+    --radius-100: 0.5rem; /* 8px */
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('assets/fonts/Inter-VariableFont_slnt,wght.ttf') format('truetype');
+    font-weight: 400 700;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Color Classes */
+.bg-grey-900 {
+    background-color: hsl(var(--grey-900));
+}
+
+.bg-grey-800 {
+    background-color: hsl(var(--grey-800));
+}
+
+
+.text-grey-900 {
+    color: hsl(var(--grey-900));
+}
+
+.text-grey-800 {
+    color: hsl(var(--grey-800));
+}
+
+.text-grey-700 {
+    color: hsl(var(--grey-700));
+}
+
+.text-green {
+    color: hsl(var(--green));
+}
+
+.text-white {
+    color: hsl(var(--white));
+}
+/* Typography Classes */
+.text-preset-1 {
+    font-size: var(--text-preset-1-font-size);
+    line-height: var(--text-preset-1-line-height);
+    letter-spacing: var(--text-preset-1-letter-spacing);
+    font-weight: 600;
+}
+
+.text-preset-2-regular {
+    font-size: var(--text-preset-2-font-size);
+    line-height: var(--text-preset-2-line-height);
+    letter-spacing: var(--text-preset-2-letter-spacing);
+    font-weight: 400;
+}
+
+.text-preset-2-bold {
+    font-size: var(--text-preset-2-font-size);
+    line-height: var(--text-preset-2-line-height);
+    letter-spacing: var(--text-preset-2-letter-spacing);
+    font-weight: 700;
+}
+
+/* Spacing Utilities */
+.spacing-500 { margin: var(--spacing-500); }
+.spacing-300 { margin: var(--spacing-300); }
+.spacing-200 { margin: var(--spacing-200); }
+.spacing-150 { margin: var(--spacing-150); }
+.spacing-100 { margin: var(--spacing-100); }
+.spacing-50 { margin: var(--spacing-50); }
+
+/* Padding Utilities */
+.padding-500 { padding: var(--spacing-500); }
+.padding-300 { padding: var(--spacing-300); }
+.padding-200 { padding: var(--spacing-200); }
+.padding-150 { padding: var(--spacing-150); }
+.padding-100 { padding: var(--spacing-100); }
+.padding-50 { padding: var(--spacing-50); }
+
+/* Radius */
+.radius-outer{ border-radius: var(--radius-150) }
+.radius-inner{ border-radius: var(--radius-100) }
+.radius-full { border-radius: 50%; }
+
+.overflow-hidden { overflow: hidden; }
+
+.text-center{ text-align: center; }
+
+.full-height-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    width: 100%;   /* Full width */
+    margin: 0;      /* Remove default margin */
+}
+
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+
+.flex{
+    display: flex;
+}
+
+.justify-center{
+    justify-content: center;
+}
+
+.grid{
+    display: grid;
+}
+
+
+.profile-avatar img{
+    height: 5.5rem;
+    width: 5.5rem;
+    object-fit: cover;
+}
+
+.social-links ul{
+    display: grid;
+    gap: var(--spacing-200);
+}
+
+.social-links li{
+    position: relative;
+    border-radius: var(--radius-100);
+    background: hsl(var(--grey-700));
+    text-align: center;
+    padding: var(--spacing-100);
+}
+.social-links li a{
+    color: hsl(var(--white));
+    text-decoration: none;
+
+}
+
+.social-links li:focus-within, .social-links li:hover{
+    background-color: hsl(var(--green));
+    box-shadow: 0 0 var(--spacing-100) hsl(var(--green));
+}
+.social-links li:focus-within a, .social-links li:hover a {
+    color: hsl(var(--grey-700));
+}
+
+
+.social-links li:focus-within :focus{
+    box-shadow: none;
+    outline: none;
+}
+
+.social-links li a::after{
+    content: '';
+    position: absolute;
+    inset: 0;
+}
+
+
+
+.profile-card{
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-300);
+}
+
+
+
+
+
