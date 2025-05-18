@@ -168,7 +168,7 @@ body {
     border-radius: var(--radius-100);
     background: hsl(var(--grey-700));
     text-align: center;
-    padding: var(--spacing-100);
+    padding: var(--spacing-150);
 }
 .social-links li a{
     color: hsl(var(--white));
