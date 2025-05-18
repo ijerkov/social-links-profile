@@ -151,7 +151,6 @@ body {
     display: grid;
 }
 
-
 .profile-avatar img{
     height: 5.5rem;
     width: 5.5rem;
@@ -164,16 +163,15 @@ body {
 }
 
 .social-links li{
-    position: relative;
     border-radius: var(--radius-100);
     background: hsl(var(--grey-700));
     text-align: center;
-    padding: var(--spacing-150);
 }
 .social-links li a{
+    display: block;
     color: hsl(var(--white));
     text-decoration: none;
-
+    padding: var(--spacing-150);
 }
 
 .social-links li:focus-within, .social-links li:hover{
@@ -189,12 +187,13 @@ body {
     box-shadow: none;
     outline: none;
 }
-
+/*
 .social-links li a::after{
     content: '';
     position: absolute;
     inset: 0;
 }
+ */
 
 
 
